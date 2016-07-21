@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     imagemin = require('gulp-imagemin'),
     sass = require('gulp-sass'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    babel = require('gulp-babel');
 
 gulp.task('webserver', function() {
     gulp.src('./build/')
@@ -35,6 +36,9 @@ gulp.task('cssMin', function() {
 gulp.task('jsUglify', function() {
     return gulp.src('./app/js/**/*.js')
         .pipe(concat('all.js'))
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('./build/js'))
         .pipe(notify(' I did it! '));
