@@ -1,0 +1,18 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+            -ms-border-radius: $radius;
+                border-radius: $radius;
+}
+@mixin border-all($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}

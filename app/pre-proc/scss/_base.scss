@@ -1,0 +1,22 @@
+/* BASE */
+@import "variables";
+@import "mixin";
+body {
+    margin: $margin + px;
+    padding: $padding;
+    font-size: $font-size + px;
+    header {
+        margin: $margin + px;
+        padding: 3px;
+        background-color: $bg-color;
+        color: $color;
+        overflow: hidden;
+    }
+    input {
+        @include border-radius($border-radius);
+    }
+}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
+/* END BASE */

@@ -1,0 +1,105 @@
+@import "variables";
+@import "mixin";
+.list {
+    @include border-radius($border-radius);
+    @include border-all(1px, solid, #999);
+    position: relative;
+    width: $width;
+    padding: $padding-list + px;
+    vertical-align: top;
+    background-color: $background-color-list;
+    h1 {
+        font-size: $font-size + px;
+    }
+    input {
+        margin-bottom:0;
+    }
+    &.new-list {
+        background-color: $bg-color-new-list;
+    }
+    &-inline {
+        display: inline-block;
+    }
+}
+.lists-container {
+    padding: 2 * $padding-list + px;
+    position: relative;
+}
+.remove {
+    width: $width-remove + px;
+    height: $height-remove + px;
+    @include background('../img/x.svg');
+    &-small {
+        width: $width-small + px;
+        height: $height-small + px;
+        @include background('../img/x_sm.svg');
+    }
+    &-list {
+        position : absolute;
+        top: 0;
+        right: 0;
+        margin: 6px;
+        font: $font-weight $font-family-list;
+        color: $color-list;
+    }
+    &-card {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+    }
+}
+.no-display {
+    display: none;
+}
+.card {
+    @include border-all(1px, solid, #b9b9b9);
+    @include border-radius($border-radius);
+    position: relative;
+    margin: 10px 0;
+    padding: 2 * $padding-list + px;
+    background-color: $bg-color-card;
+}
+.edit{
+    width: $width-remove + px;
+    height: $height-remove + px;
+    @include background('../img/pen_alt_stroke.svg');
+    &-small{
+        width: $width-small + px;
+        height: $height-small + px;
+        @include background('../img/pen_alt_stroke_sm.svg');
+    }
+    &-card{
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 20px;
+    }
+    &:hover{
+        @include background('../img/pen_alt_fill.svg');
+    }
+    &_sm:hover{
+        @include background('../img/pen_alt_fill_sm.svg');
+    }
+}
+.card:hover{
+    @include border-all(1px, solid, #205c7e);
+}
+.hand{
+    cursor: pointer;
+}
+input.search{
+    width: $width;
+    margin-top: 4px;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+.select-list{
+    margin: 10px 0 0 0;
+}
+.header-link{
+    color: $color-header-link;
+    vertical-align: middle;
+    &:hover{
+        color: $color-header-link-hover;
+    }
+}

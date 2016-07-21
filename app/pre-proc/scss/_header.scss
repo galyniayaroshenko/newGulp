@@ -1,0 +1,10 @@
+/* HEADER */
+@import "variables";
+.app-name{
+    margin: $margin;
+    padding: $padding;
+    text-indent: ($font-size / 2) + px;
+    font: 500 $font-size-heder + px $font-family;
+    color: $color;
+}
+/* END HEADER */
